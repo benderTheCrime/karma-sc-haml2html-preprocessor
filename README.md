@@ -17,7 +17,7 @@ Then, in your karma configuration:
 }
 ```
 
-# TODO
+### TODO
 * tests
 * jshint
 * jscs
