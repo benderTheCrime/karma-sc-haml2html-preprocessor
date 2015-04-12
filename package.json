@@ -1,6 +1,6 @@
 {
   "name": "karma-sc-haml2html-preprocessor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Karma plugin. Compile HAML templates to HTML on the fly.",
   "main": "lib/index.js",
   "scripts": {

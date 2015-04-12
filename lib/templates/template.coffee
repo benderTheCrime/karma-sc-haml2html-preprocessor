@@ -1,8 +1,8 @@
 (function(w) {
     'use strict';
-    
-    if (typeof(w.__hamlTemplates__) === 'undefined') {
-        w.__hamlTemplates__ = {};
+
+    if (typeof(w.__haml__) === 'undefined') {
+        w.__haml__ = {};
     }
-    w.__hamlTemplates__['%s'] = '%s';
- })(window);
+    w.__haml__['%s'] = '%s';
+})(window);
