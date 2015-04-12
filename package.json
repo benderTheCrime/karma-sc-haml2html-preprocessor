@@ -1,36 +1,26 @@
 {
-  "name": "karma-ng-html2js-preprocessor",
-  "version": "0.1.2",
-  "description": "A Karma plugin. Compile AngularJS templates to JavaScript on the fly.",
+  "name": "karma-sc-haml2html-preprocessor",
+  "version": "0.0.1",
+  "description": "A Karma plugin. Compile HAML templates to HTML on the fly.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/karma-runner/karma-ng-html2js-preprocessor.git"
+    "url": "https://github.com/benderTheCrime/karma-sc-html2haml-preprocessor"
   },
   "keywords": [
     "karma-plugin",
     "karma-preprocessor",
-    "angularjs",
-    "angular",
-    "html2js"
+    "haml2html"
   ],
-  "author": "Vojta Jina <vojta.jina@gmail.com>",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-simple-mocha": "~0.4",
-    "grunt-contrib-jshint": "~0.6",
-    "chai": "~1.4",
-    "mocha": "~1.8",
-    "grunt-npm": "~0.0.2",
-    "grunt-bump": "~0.0.7",
-    "grunt-auto-release": "~0.0.2"
+  "author": "Vojta Jina <vojta.jina@gmail.com>, Joe Groseclose <@benderTheCrime>",
+  "dependencies": {
+    "karma": "^0.12.31"
   },
-  "peerDependencies": {
-    "karma": ">=0.9"
+  "devDependencies": {
+    "gulp": "^3.8.11"
   },
   "license": "MIT",
   "contributors": [

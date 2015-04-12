@@ -1,83 +1,23 @@
-# karma-ng-html2js-preprocessor [![Build Status](https://travis-ci.org/karma-runner/karma-ng-html2js-preprocessor.svg?branch=master)](https://travis-ci.org/karma-runner/karma-ng-html2js-preprocessor)
+# Karma Haml2Html Preprocessor
+This plugin is heavily based on [karma-html2js-preprocessor](https://github.com/karma-runner/karma-html2js-preprocessor). I do not recommend using it for your own purposes, but if you care to, knock yourself out. It takes in all HAML files and preprocesses them into HTML, which is then stored in `window.__hamlTemplates__`.
 
-> Preprocessor for converting HTML files to [AngularJS](http://angularjs.org/) templates.
+This README assumes knowledge of Karma.
 
-*Note:* If you are looking for a general preprocessor that is not tied to Angular, check out [karma-html2js-preprocessor](https://github.com/karma-runner/karma-html2js-preprocessor).
+To use, first install the plugin with
+```bash
+npm install karma-sc-haml2-html-preprocessor
+```
 
-## Installation
-
-The easiest way is to keep `karma-ng-html2js-preprocessor` as a devDependency in your `package.json`.
-```json
+Then, in your karma configuration:
+```javascript
 {
-  "devDependencies": {
-    "karma": "~0.10",
-    "karma-ng-html2js-preprocessor": "~0.1"
-  }
+    preprocessors: {
+        '**/*.haml': 'sc-haml2html'
+    }
 }
 ```
 
-You can simple do it by:
-```bash
-npm install karma-ng-html2js-preprocessor --save-dev
-```
-
-## Configuration
-```js
-// karma.conf.js
-module.exports = function(config) {
-  config.set({
-    preprocessors: {
-      '**/*.html': ['ng-html2js']
-    },
-
-    files: [
-      '*.js',
-      '*.html',
-      '*.html.ext',
-      // if you wanna load template files in nested directories, you must use this
-      '**/*.html'
-    ],
-
-    ngHtml2JsPreprocessor: {
-      // strip this from the file path
-      stripPrefix: 'public/',
-      stripSufix: '.ext',
-      // prepend this to the
-      prependPrefix: 'served/',
-
-      // or define a custom transform function
-      cacheIdFromPath: function(filepath) {
-        return cacheId;
-      },
-
-      // setting this option will create only a single module that contains templates
-      // from all the files, so you can load them all with module('foo')
-      moduleName: 'foo'
-    }
-  });
-};
-```
-
-## How does it work ?
-
-This preprocessor converts HTML files into JS strings and generates Angular modules. These modules, when loaded, puts these HTML files into the `$templateCache` and therefore Angular won't try to fetch them from the server.
-
-For instance this `template.html`...
-```html
-<div>something</div>
-```
-... will be served as `template.html.js`:
-```js
-angular.module('template.html', []).config(function($templateCache) {
-  $templateCache.put('template.html', '<div>something</div>');
-});
-```
-
-See the [ng-directive-testing](https://github.com/vojtajina/ng-directive-testing) for a complete example.
-
-----
-
-For more information on Karma see the [homepage].
-
-
-[homepage]: http://karma-runner.github.com
+# TODO
+* tests
+* jshint
+* jscs
