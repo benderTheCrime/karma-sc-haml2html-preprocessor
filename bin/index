@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+module.exports = {
+    'preprocessor:sc-haml2html': [ 'factory', require('../lib/js/haml2html') ]
+};
