@@ -3,8 +3,11 @@ This plugin is heavily based on [karma-html2js-preprocessor](https://github.com/
 
 This README assumes knowledge of Karma.
 
-To use, first install the plugin with
+To use, first install the HAML Ruby gem and plugin with
 ```bash
+gem install bundler gemrat
+gemrat haml
+bundle install
 npm install karma-sc-haml2-html-preprocessor
 ```
 

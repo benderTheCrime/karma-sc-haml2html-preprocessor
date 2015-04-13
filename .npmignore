@@ -1,5 +1,6 @@
 .*
 test
-
-Gulpfile.coffee
+Gulpfile.js
 CONTRIBUTING.md
+Gemfile
+Gemfile.lock
