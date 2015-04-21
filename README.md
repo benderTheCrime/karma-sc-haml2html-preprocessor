@@ -19,6 +19,3 @@ Then, in your karma configuration:
     }
 }
 ```
-
-### TODO
-* *Write more tests*: currently the package only has one test, but it's a damn good test.

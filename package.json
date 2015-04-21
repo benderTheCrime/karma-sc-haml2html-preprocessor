@@ -1,6 +1,6 @@
 {
   "name": "karma-sc-haml2html-preprocessor",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A Karma plugin: Compile HAML templates to HTML on the fly.",
   "main": "bin/index",
   "scripts": {
@@ -16,19 +16,21 @@
     "haml2html"
   ],
   "author": "Vojta Jina <vojta.jina@gmail.com>, Joe Groseclose <@benderTheCrime>",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "1.0.0"
+  },
   "devDependencies": {
-    "chalk": "^1.0.0",
-    "gulp": "^3.8.11",
-    "gulp-cli": "^0.2.0",
-    "gulp-jscs": "^1.5.1",
-    "gulp-jshint": "^1.10.0",
-    "gulp-mocha": "^2.0.1",
-    "mocha": "^2.2.4",
-    "simple-mock": "^0.2.10"
+    "gulp": "3.8.11",
+    "gulp-cli": "0.2.0",
+    "gulp-jscs": "1.5.1",
+    "gulp-jshint": "1.10.0",
+    "gulp-mocha": "2.0.1",
+    "mocha": "2.2.4",
+    "simple-mock": "0.2.10"
   },
   "license": "MIT",
   "contributors": [
+    "Joe Groseclose <joe.groseclose@gmail.com>",
     "Friedel Ziegelmayer <friedel.ziegelmayer@gmail.com>",
     "Lukasz Bandzarewicz <lucassus@gmail.com>",
     "BrianLenzo <brian.lenzo@gmail.com>",
